@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'pobl-healthandsafety'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7ABA22EA0DC34FA19D2A5E0DC0709983 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E3D9768ECFD14AA39C37786FB046F8C6 }}
           package: .
