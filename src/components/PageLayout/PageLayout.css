@@ -1,0 +1,30 @@
+header {
+    background-color:var(--yellow);
+    width: 100vw;
+    padding: 1.75rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size:1.4rem;
+}
+
+nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav li a {
+    margin-right: 28px;
+    text-decoration: none;
+}
+
+.pageContent {
+    padding: 2rem;
+}
