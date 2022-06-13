@@ -7,12 +7,10 @@ function handleLogout(instance) {
 }
 
 const SignOut = () => {
-    const { instance, accounts } = useMsal();
-    // const name = accounts[0] && accounts[0].name
+    const { instance } = useMsal();
 
     return (
         <div>
-            {/* <p>Signed in as: <a href="#login">{name}</a></p> */}
             <button className="btn" onClick={() => handleLogout(instance)}>
                 Sign out
             </button>

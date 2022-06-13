@@ -1,12 +1,9 @@
-import { useMsal } from "@azure/msal-react";
 import { useEffect } from "react";
 import Cases from "../components/Cases/Cases";
 
 import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
 
 const Home = () => {
-  const { instance, accounts } = useMsal();
-
   const fetchEmployee = useEmployeeFetch()
   const employee = useEmployee().employee.value[0]
   const { pobl_employeename, pobl_employeeemail } = employee
@@ -35,7 +32,7 @@ const Home = () => {
           <div className="home_cases_heading">
             <h3>Open Cases</h3>
             <div className="home_cases_create">
-              <a>+ Add New</a>
+              <button>+ Add New</button>
             </div>
           </div>
           <div className="home_cases_container">
