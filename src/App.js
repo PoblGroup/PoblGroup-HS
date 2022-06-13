@@ -5,23 +5,26 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-reac
 
 import Home from './screens/Home'
 import PageLayout from './components/PageLayout/PageLayout';
+import { EmployeeProvider } from './context/EmployeeContext';
 
 function App() {
   return (
     <div className="App">
-      <PageLayout>
-        <AuthenticatedTemplate>
-          <Router>
-            <Routes>
-              <Route path='/' element={<Home />} />
-            </Routes>
-          </Router>
-        </AuthenticatedTemplate>
-        <UnauthenticatedTemplate>
-          <p>Nope</p>
-        </UnauthenticatedTemplate>
-        
-      </PageLayout>
+      <EmployeeProvider>
+        <PageLayout>
+          <AuthenticatedTemplate>
+            <Router>
+              <Routes>
+                <Route path='/' element={<Home />} />
+              </Routes>
+            </Router>
+          </AuthenticatedTemplate>
+          <UnauthenticatedTemplate>
+            <p>Not Signed In</p>
+          </UnauthenticatedTemplate>
+          
+        </PageLayout>
+      </EmployeeProvider>
     </div>
   );
 }

@@ -2,6 +2,8 @@
 
 :root {
   --yellow: #FFC857;
+  --green: #59CD90;
+  --blue: #36558F;
 }
 
 * {
@@ -20,6 +22,8 @@ a:visited {
   color:black;
   text-decoration: none;
 }
+
+a:hover { cursor: pointer; }
 
 .btn {
   background-color:#f9f9f9;
