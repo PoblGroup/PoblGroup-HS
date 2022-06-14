@@ -6,6 +6,7 @@ import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-reac
 import { EmployeeProvider } from './context/EmployeeContext';
 import Home from './screens/Home'
 import CaseDetail from './screens/CaseDetail';
+import DocumentDetail from './screens/DocumentDetail';
 import PageLayout from './components/PageLayout/PageLayout';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path="cases/:id" element={<CaseDetail />} />
+                <Route path="documents/:id" element={<DocumentDetail />} />
               </Routes>
             </Router>
           </AuthenticatedTemplate>

@@ -1,0 +1,79 @@
+.document {
+    padding: 2rem;
+}
+
+.document_heading {
+    position:relative;
+    margin-bottom:2rem;
+}
+
+.document_heading h2,
+.document h3 {
+    margin-bottom: 20px;
+}
+
+.document_heading h2::after {
+    content: "";
+    position: absolute;
+    border-top: 2px solid var(--yellow);
+    left: 0;
+    top: 2rem;
+    width: 60px;
+    height: 0px;
+}
+
+.document .badge {
+    background-color: var(--yellow);
+    padding: 3px 10px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.document_files {
+    margin-bottom: 2rem;
+}
+
+.document_detail {
+    display: grid;
+    gap:20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+}
+
+.document .form_group label {
+    font-size:.8rem;
+    font-weight:700;
+}
+
+.list_group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 1rem 0;
+    width: 50vw;
+}
+
+.list_group_item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list_group_item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.list_group_item:last-child {
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.document h3 {
+    margin: 0 0 10px 0;
+}

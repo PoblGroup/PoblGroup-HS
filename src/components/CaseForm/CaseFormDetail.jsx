@@ -86,8 +86,6 @@ const CaseFormDetail = ({caseDetail}) => {
             :
             ( <p>Awaiting Managers Investigation</p> )}
         </div>
-
-        
     )
 }
 

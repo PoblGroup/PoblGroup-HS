@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Cases from "../components/Cases/Cases";
+import Documents from "../components/Documents/Documents";
 
 import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
 
@@ -45,7 +46,7 @@ const Home = () => {
             <h3>Documents</h3>
           </div>
           <div className="section_container">
-            Content here.....
+            <Documents employee={employee}/>
           </div>
         </div>
       </div>

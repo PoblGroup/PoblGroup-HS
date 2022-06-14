@@ -27,6 +27,7 @@ const Cases = ({employee}) => {
                 ))
                 const sortedUserCases = result.value.slice().sort((a, b) => b.pobl_eventdateandtime - a.pobl_eventdateandtime)
                 setMyCases(sortedUserCases)
+                console.log(sortedUserCases)
             } catch (error) {
                 console.log('Error', error)
             }

@@ -35,3 +35,11 @@ a:hover { cursor: pointer; }
 .btn:hover {
   cursor: pointer;
 }
+
+.btn-primary {
+  background-color: var(--blue);
+  border-radius: 0.25rem;
+  margin: 20px 0;
+  font-weight: 700;
+  color:#fff;
+}
