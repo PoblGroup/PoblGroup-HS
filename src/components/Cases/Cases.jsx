@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { GetDynamicsToken } from '../../utils/DynamicsAuth'
 
 const Cases = ({employee}) => {
@@ -21,7 +22,6 @@ const Cases = ({employee}) => {
             try {
                 const response = await fetch(`http://localhost:5000/api/hs/events?employeeId=${pobl_employeehsid}`, requestOptions)
                 const result = await response.json()
-                console.log(result.value)
                 result.value.map(c => (
                     c.pobl_eventdateandtime = new Date(c.pobl_eventdateandtime)
                 ))
@@ -48,7 +48,7 @@ const Cases = ({employee}) => {
             <tbody>
                 {myCases.map((c,index) => (
                     <tr key={index}>
-                        <td>{c.pobl_casename}</td>
+                        <td><Link to={`/cases/${c.pobl_eventid}`}>{c.pobl_casename}</Link></td>
                         <td>{c.pobl_casetype}</td>
                         <td>{c.pobl_actiontype}</td>
                         <td>{c.createdon}</td>

@@ -39,8 +39,7 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.home_cases_container,
-.home_documents_container {
+.section_container {
     background-color:#FFF;
     border-radius: 10px;
     padding: 1rem;

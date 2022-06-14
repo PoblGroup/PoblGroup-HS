@@ -10,10 +10,10 @@ const PageLayout = (props) => {
         <header>
             <a className='logo' href="/">Pobl HS</a>
             <nav>
-                <li>Cases</li>
-                <li>Documents</li>
-                <li>Team</li>
-                <li>Tasks</li>
+                <li><a href='/'>Cases</a></li>
+                <li><a href='/'>Documents</a></li>
+                <li><a href='/'>Team</a></li>
+                <li><a href='/'>Tasks</a></li>
             </nav>
             <AuthenticatedTemplate>
               <SignOut />

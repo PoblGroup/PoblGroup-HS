@@ -3,9 +3,10 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
 
-import Home from './screens/Home'
-import PageLayout from './components/PageLayout/PageLayout';
 import { EmployeeProvider } from './context/EmployeeContext';
+import Home from './screens/Home'
+import CaseDetail from './screens/CaseDetail';
+import PageLayout from './components/PageLayout/PageLayout';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Router>
               <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path="cases/:id" element={<CaseDetail />} />
               </Routes>
             </Router>
           </AuthenticatedTemplate>

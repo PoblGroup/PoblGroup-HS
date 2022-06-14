@@ -32,10 +32,10 @@ const Home = () => {
           <div className="home_cases_heading">
             <h3>Open Cases</h3>
             <div className="home_cases_create">
-              <button>+ Add New</button>
+              <a href='/'>+ Add New</a>
             </div>
           </div>
-          <div className="home_cases_container">
+          <div className="section_container">
             <Cases employee={employee}/>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Home = () => {
           <div className="home_documents_heading">
             <h3>Documents</h3>
           </div>
-          <div className="home_documents_container">
+          <div className="section_container">
             Content here.....
           </div>
         </div>
