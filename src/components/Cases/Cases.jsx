@@ -60,6 +60,7 @@ const Cases = ({employee}) => {
                             <td>Employee Name</td>
                             <td>Case</td>
                             <td>Stage</td>
+                            <td>Created</td>
                             <td></td>
                         </>
                     ) : (
@@ -92,7 +93,8 @@ const Cases = ({employee}) => {
                             <td>{m.employeeName}</td>
                             <td>{c.pobl_casename}</td>
                             <td>{c.pobl_actiontype}</td>
-                            <td><button className="btn">View</button></td>
+                            <td><Moment date={c.pobl_createdon} format="dddd, MMMM Do YYYY" /></td>
+                            <td><Link className="btn" to={`/management/cases/${c.pobl_eventid}`}>View</Link></td>
                         </tr>
                     ))
                 ))}

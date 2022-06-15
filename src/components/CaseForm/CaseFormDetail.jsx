@@ -31,16 +31,16 @@ const CaseFormDetail = ({caseDetail}) => {
                     <p>{caseDetail.exactLocation}</p>
                 </div>
                 <div className="form_group">
-                    <label>Description</label>
-                    <p>{caseDetail.description}</p>
-                </div>
-                <div className="form_group">
                     <label>Impacts External People</label>
                     <p>{(caseDetail.impactsexternalpeople) ? "Yes" : "No"}</p>
                 </div>
                 <div className="form_group">
                     <label>Impacts Colleagues</label>
                     <p>{(caseDetail.impactscolleagues) ? "Yes" : "No"}</p>
+                </div>
+                <div className="form_group">
+                    <label>Description</label>
+                    <p>{caseDetail.description}</p>
                 </div>
             </div>
             {/* Manager Investigation */}

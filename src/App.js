@@ -9,6 +9,7 @@ import CaseDetail from './screens/CaseDetail';
 import NewCase from './screens/NewCase';
 import DocumentDetail from './screens/DocumentDetail';
 import Management from './screens/Management';
+import MemberCaseDetail from './screens/MemberCaseDetail';
 
 import PageLayout from './components/PageLayout/PageLayout';
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path="cases/new" element={<NewCase />} />
                 <Route path="documents/:id" element={<DocumentDetail />} />
                 <Route path="management" element={<Management />} />
+                <Route path="management/cases/:id" element={<MemberCaseDetail />} />
               </Routes>
             </Router>
           </AuthenticatedTemplate>
