@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+
 import Cases from "../components/Cases/Cases";
-import Documents from "../components/Documents/Documents";
+import Tasks from "../components/Tasks/Tasks";
 
 import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
 
@@ -43,7 +44,7 @@ const Management = () => {
             <h3>Manager Tasks</h3>
           </div>
           <div className="section_container">
-            <Documents employee={employee}/>
+            <Tasks employee={employee}/>
           </div>
         </div>
       </div>
