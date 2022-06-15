@@ -1,4 +1,5 @@
 import React from 'react'
+import Moment from 'react-moment'
 
 import './Document.css'
 
@@ -16,11 +17,11 @@ const DocumentFormDetail = ({document, files, confirmResponse}) => {
             </div>
             <div className="form_group">
                 <label>Sign By</label>
-                <p>{document.pobl_documentsignby}</p>
+                <p><Moment date={document.pobl_documentsignby} format="dddd, MMMM Do YYYY" /></p>
             </div>
             <div className="form_group">
                 <label>Expires</label>
-                <p>{document.pobl_documentexpires}</p>
+                <p><Moment date={document.pobl_documentexpires} format="dddd, MMMM Do YYYY" /></p>
             </div>
             <div className="form_group">
                 <label>Intro</label>

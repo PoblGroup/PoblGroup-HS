@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Moment from 'react-moment'
 import { Link } from 'react-router-dom'
 import { GetDynamicsToken } from '../../utils/DynamicsAuth'
 
@@ -47,8 +48,8 @@ const Documents = ({employee}) => {
                 {myDocuments && myDocuments.map((d,index) => (
                     <tr key={index}>
                         <td><Link to={`/documents/${d.id}`}>{d.document.name}</Link></td>
-                        <td>{d.document.signBy}</td>
-                        <td>{d.createdOn}</td>
+                        <td><Moment date={d.document.signBy} format="dddd, MMMM Do YYYY" /></td>
+                        <td><Moment date={d.createdOn} format="dddd, MMMM Do YYYY" /></td>
                         <td>{d.signed}</td>
                     </tr>
                 ))}

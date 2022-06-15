@@ -1,4 +1,5 @@
 import React from 'react'
+import Moment from 'react-moment'
 
 import './CaseForm.css'
 
@@ -7,7 +8,7 @@ const CaseFormDetail = ({caseDetail}) => {
         <div className="section_container case">
             <div className="case_heading">
                 <h2>{caseDetail.name}</h2>
-                <p className="text-muted">Incident Date: {caseDetail.date}</p>
+                <p className="text-muted">Incident Date: <Moment date={caseDetail.date} format="dddd, MMMM Do YYYY" /></p>
                 <p className="badge">{caseDetail.caseType}</p>
             </div>
             {/* Initial Case Reported */}
@@ -23,7 +24,7 @@ const CaseFormDetail = ({caseDetail}) => {
                 </div>
                 <div className="form_group">
                     <label>Date & Time</label>
-                    <p>{caseDetail.date}</p>
+                    <p><Moment date={caseDetail.date} format="dddd, MMMM Do YYYY" /></p>
                 </div>
                 <div className="form_group">
                     <label>Location</label>

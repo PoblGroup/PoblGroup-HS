@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Moment from 'react-moment'
 import { Link } from 'react-router-dom'
 import { GetDynamicsToken } from '../../utils/DynamicsAuth'
 
@@ -52,7 +53,7 @@ const Cases = ({employee}) => {
                         <td><Link to={`/cases/${c.pobl_eventid}`}>{c.pobl_casename}</Link></td>
                         <td>{c.pobl_casetype}</td>
                         <td>{c.pobl_actiontype}</td>
-                        <td>{c.createdon}</td>
+                        <td><Moment date={c.pobl_createdon} format="dddd, MMMM Do YYYY" /></td>
                         <td></td>
                     </tr>
                 ))}
