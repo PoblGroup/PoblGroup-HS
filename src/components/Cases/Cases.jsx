@@ -15,7 +15,7 @@ const Cases = ({employee}) => {
             if(page === '/management' && pobl_employeeismanager) {
                 url = `http://localhost:5000/api/hs/events/myteam?managerId=${pobl_employeehsid}`
             } else {
-                url = `http://localhost:5000/api/hs/events?employeeId=${pobl_employeehsid}`
+                url = `https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events?employeeId=${pobl_employeehsid}`
             }
 
             const token = await GetDynamicsToken()

@@ -36,7 +36,7 @@ export function EmployeeProvider({ children }) {
         try {
             const response = await fetch(`http://localhost:5000/api/hs/employees/${email}`, requestOptions)
             const result = await response.json()
-            setEmployee(result)
+            // setEmployee(result)
             localStorage.setItem("HS Employee", JSON.stringify(result));
         } catch (error) {
             console.log('Error', error)

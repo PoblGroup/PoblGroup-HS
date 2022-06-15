@@ -1,3 +1,4 @@
+import { useMsal } from "@azure/msal-react";
 import { useEffect } from "react";
 import Cases from "../components/Cases/Cases";
 import Documents from "../components/Documents/Documents";
@@ -5,13 +6,16 @@ import Documents from "../components/Documents/Documents";
 import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
 
 const Home = () => {
+  const { accounts } = useMsal();
+  const name = accounts[0] && accounts[0].name
+  const email = accounts[0] && accounts[0].username
+
   const fetchEmployee = useEmployeeFetch()
   const employee = useEmployee().employee.value[0]
-  const { pobl_employeename, pobl_employeeemail } = employee
 
   useEffect(() => {
-    fetchEmployee(pobl_employeeemail)
-  }, [fetchEmployee, pobl_employeeemail])
+    fetchEmployee(email)
+  }, [fetchEmployee, email])
 
   return (
     <>
@@ -22,12 +26,14 @@ const Home = () => {
           </div>
           <div className="home_avatar_text">
             <p>Welcome Back</p>
-            <h2>{pobl_employeename}</h2>
+            <h2>{name}</h2>
           </div>
         </div>
       </div>
+      
       {/* Page Content */}
       <div className="home_pagecontent">
+
         {/* Open Cases */}
         <div className="section home_cases">
           <div className="home_cases_heading">
@@ -40,6 +46,7 @@ const Home = () => {
             <Cases employee={employee}/>
           </div>
         </div>
+
         {/* Documents */}
         <div className="section documents">
           <div className="home_documents_heading">
@@ -49,6 +56,7 @@ const Home = () => {
             <Documents employee={employee}/>
           </div>
         </div>
+
       </div>
       
     </>
