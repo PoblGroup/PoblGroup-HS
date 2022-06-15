@@ -43,3 +43,10 @@ a:hover { cursor: pointer; }
   font-weight: 700;
   color:#fff;
 }
+
+.btn-yellow {
+  background-color: var(--yellow);
+  border-radius: 0.25rem;
+  margin: 20px 0;
+  font-weight: 700;
+}

@@ -32,7 +32,7 @@ const DocumentFormDetail = ({document, files, confirmResponse}) => {
             <p>Please read the following files.</p>
             <ul className="list_group">
             {files.length > 0 ? files.map((f, i) => (
-                <li className="list_group_item">
+                <li key={i} className="list_group_item">
                     <a href={f.url} target='_blank' rel='noreferrer'>{f.name}</a>
                 </li>
             )) 

@@ -33,7 +33,7 @@ const Home = () => {
           <div className="home_cases_heading">
             <h3>Open Cases</h3>
             <div className="home_cases_create">
-              <a href='/'>+ Add New</a>
+              <a href='/cases/new'>+ Add New</a>
             </div>
           </div>
           <div className="section_container">

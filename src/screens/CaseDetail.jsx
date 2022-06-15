@@ -37,7 +37,7 @@ const CaseDetail = () => {
 
     return (
         <>
-            <button onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center' }}>← Back</button>
+            <button className='btn' onClick={() => navigate(-1)} style={{ display: 'flex', alignItems: 'center' }}>← Back</button>
             {caseDetail && (
                 <CaseFormDetail caseDetail={caseDetail} />
             )}
