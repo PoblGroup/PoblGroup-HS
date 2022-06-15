@@ -43,7 +43,7 @@ const DocumentFormDetail = ({document, files, confirmResponse}) => {
         <div className="document_confirmation">
             <h3>Confirmation</h3>
             <p>Please confirm that you have read all the attached documents above</p>
-            <button className="btn btn-primary" onClick={confirmResponse}>Confirm & Sign</button>
+            <button className="btn btn-yellow" onClick={confirmResponse}>Confirm & Sign</button>
         </div>
     </div>
   )

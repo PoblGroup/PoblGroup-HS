@@ -1,4 +1,4 @@
-import { AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
+import { AuthenticatedTemplate } from "@azure/msal-react";
 
 import './PageLayout.css'
 import SignIn from '../SignIn/SignIn'
@@ -16,9 +16,6 @@ const PageLayout = (props) => {
             <AuthenticatedTemplate>
               <SignOut />
             </AuthenticatedTemplate>
-            <UnauthenticatedTemplate>
-              <SignIn />
-            </UnauthenticatedTemplate>
         </header>
 
         <div className='pageContent'>

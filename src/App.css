@@ -1,3 +1,24 @@
+.logged_out_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    padding: 4rem;
+    text-align: center;
+}
+
+.logged_out_container svg {
+    margin: 2rem;
+}
+
+.logged_out_container h1,
+.logged_out_container h2,
+.logged_out_container h3,
+.logged_out_container h4 {
+    margin: .5rem;
+}
+
 .section {
     margin-bottom: 3rem;
 }

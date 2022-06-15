@@ -13,6 +13,8 @@ import MemberCaseDetail from './screens/MemberCaseDetail';
 import TaskDetail from './screens/TaskDetail';
 
 import PageLayout from './components/PageLayout/PageLayout';
+import {ReactComponent as LoggedOutSvg} from "./logged_out.svg"
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
@@ -33,7 +35,12 @@ function App() {
             </Router>
           </AuthenticatedTemplate>
           <UnauthenticatedTemplate>
-            <p>Not Signed In</p>
+            <div className='logged_out_container'>
+              <LoggedOutSvg />
+              <h1>It looks like your not logged in!</h1>
+              <h3>Sign in below to get started.</h3>
+              <SignIn />
+            </div>
           </UnauthenticatedTemplate>
           
         </PageLayout>

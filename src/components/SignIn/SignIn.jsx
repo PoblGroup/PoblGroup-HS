@@ -11,7 +11,7 @@ const SignIn = () => {
     const { instance } = useMsal()
     
     return (
-        <button className='btn' onClick={() => handleLogin(instance)}>
+        <button className='btn btn-yellow' onClick={() => handleLogin(instance)}>
             Sign In
         </button>
     )
