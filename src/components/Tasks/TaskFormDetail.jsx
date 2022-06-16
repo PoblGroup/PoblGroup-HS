@@ -64,7 +64,7 @@ const TaskFormDetail = ({task, files}) => {
           };
     
         try {
-            const response = await fetch(`http://localhost:5000/api/hs/diary/entries/${entry.id}`, requestOptions)
+            const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/diary/entries/${entry.id}`, requestOptions)
             const result = await response.json()
             return result
         } catch (error) {

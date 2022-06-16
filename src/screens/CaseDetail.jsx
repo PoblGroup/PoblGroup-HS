@@ -24,7 +24,7 @@ const CaseDetail = () => {
             };     
 
             try {
-                const response = await fetch(`http://localhost:5000/api/hs/events/${id}`, requestOptions)
+                const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/${id}`, requestOptions)
                 const result = await response.json()
                 setCaseDetail(result)
                 console.log(result)

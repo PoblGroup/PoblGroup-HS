@@ -30,7 +30,7 @@ const DocumentDetail = () => {
             };
 
             try {
-                const response = await fetch(`http://localhost:5000/api/hs/policyresponses/${id}`, requestOptions)
+                const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/policyresponses/${id}`, requestOptions)
                 const result = await response.json()
                 const { error, data } = result
                 setIsLoading(false)
@@ -62,7 +62,7 @@ const DocumentDetail = () => {
         };
 
         try {
-            const response = await fetch(`http://localhost:5000/api/hs/policyresponses/${id}`, requestOptions)
+            const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/policyresponses/${id}`, requestOptions)
             const result = await response.json()
             const { error, message } = result
             if(message) navigate(-1)
