@@ -1,9 +1,12 @@
 import { useMsal } from "@azure/msal-react";
 import { useEffect, useState } from "react";
+import Gravatar from 'react-gravatar'
+
 import Cases from "../components/Cases/Cases";
 import Documents from "../components/Documents/Documents";
-
 import { useEmployeeFetch } from '../context/EmployeeContext';
+import avatar from "../../src/boy.png";
+
 
 const Home = () => {
   const { accounts } = useMsal();
@@ -22,6 +25,9 @@ const Home = () => {
     GetEmployee()
   }, [fetchEmployee, email])
 
+  const avatarUrl = `http://localhost:3000${avatar}`
+  console.log(avatarUrl)
+
   return (
     <>
 
@@ -30,13 +36,16 @@ const Home = () => {
           <div className="home_page_header">
             <div className="section home_avatar_container">
               <div className="home_avatar_image">
-                <img src="https://source.unsplash.com/random/86×86/?portrait" alt="" />
+                {/* <img src="https://source.unsplash.com/random/86×86/?portrait" alt="" /> */}
+                {/* <img src={avatar} alt="" /> */}
+                <Gravatar email={email} size={100} default="" />
               </div>
               <div className="home_avatar_text">
                 <p>Welcome Back</p>
                 <h2>{name}</h2>
               </div>
             </div>
+            <p style={{ fontSize: '.9rem', color:'lightgrey', marginTop: '-20px', marginBottom: '20px'}}>Image powered by <a href="https://en.gravatar.com/">Gravatar</a></p>
           </div>
         
           <div className="home_pagecontent">
