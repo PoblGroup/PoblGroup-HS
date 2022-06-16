@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Gravatar from 'react-gravatar'
 
 import Cases from "../components/Cases/Cases";
 import Tasks from "../components/Tasks/Tasks";
@@ -19,13 +20,14 @@ const Management = () => {
       <div className="home_page_header">
         <div className="section home_avatar_container">
           <div className="home_avatar_image">
-            <img src="https://source.unsplash.com/random/86×86/?portrait" alt="" />
+            <Gravatar email={pobl_employeeemail} size={100} default="" />
           </div>
           <div className="home_avatar_text">
             <p>Welcome Back</p>
             <h2>{pobl_employeename}</h2>
           </div>
         </div>
+        <p style={{ fontSize: '.9rem', color:'lightgrey', marginTop: '-20px', marginBottom: '20px'}}>Image powered by <a href="https://en.gravatar.com/">Gravatar</a></p>
       </div>
       {/* Page Content */}
       <div className="home_pagecontent">
