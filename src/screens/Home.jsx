@@ -6,6 +6,7 @@ import Cases from "../components/Cases/Cases";
 import Documents from "../components/Documents/Documents";
 import { useEmployeeFetch } from '../context/EmployeeContext';
 import avatar from "../../src/boy.png";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -54,7 +55,7 @@ const Home = () => {
               <div className="home_cases_heading">
                 <h3>Open Cases</h3>
                 <div className="home_cases_create">
-                  <a href='/cases/new'>+ Add New</a>
+                  <Link to='/cases/new'>+ Add New</Link>
                 </div>
               </div>
               <div className="section_container">
