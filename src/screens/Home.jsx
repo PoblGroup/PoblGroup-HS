@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Cases from "../components/Cases/Cases";
 import Documents from "../components/Documents/Documents";
 
-import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
+import { useEmployeeFetch } from '../context/EmployeeContext';
 
 const Home = () => {
   const { accounts } = useMsal();
