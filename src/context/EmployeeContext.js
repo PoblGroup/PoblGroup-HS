@@ -14,7 +14,7 @@ export function useEmployeeFetch() {
 
 export function EmployeeProvider({ children }) {
     // const [employee, setEmployee] = useState(null)
-    const [employee, setEmployee] = useState(() => {
+    const [employee ] = useState(() => {
         // Get Stored Value
         const e = localStorage.getItem("HS Employee")
         const intialValue = JSON.parse(e)
