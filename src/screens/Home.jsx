@@ -1,5 +1,5 @@
 import { useMsal } from "@azure/msal-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cases from "../components/Cases/Cases";
 import Documents from "../components/Documents/Documents";
 
@@ -9,16 +9,22 @@ const Home = () => {
   const { accounts } = useMsal();
   const name = accounts[0] && accounts[0].name
   const email = accounts[0] && accounts[0].username
+  const [employee, setEmployee] = useState(null)
 
   const fetchEmployee = useEmployeeFetch()
-  const employee = useEmployee().employee.value[0]
 
   useEffect(() => {
-    fetchEmployee(email)
+    const GetEmployee = async () => {
+      await fetchEmployee(email)
+      const emp = JSON.parse(localStorage.getItem("HS Employee"))
+      setEmployee(emp.employee.value[0])
+    }
+    GetEmployee()
   }, [fetchEmployee, email])
 
   return (
     <>
+    <p>test</p>
       <div className="home_page_header">
         <div className="section home_avatar_container">
           <div className="home_avatar_image">
@@ -31,10 +37,8 @@ const Home = () => {
         </div>
       </div>
       
-      {/* Page Content */}
       <div className="home_pagecontent">
 
-        {/* Open Cases */}
         <div className="section home_cases">
           <div className="home_cases_heading">
             <h3>Open Cases</h3>
@@ -47,7 +51,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Documents */}
         <div className="section documents">
           <div className="home_documents_heading">
             <h3>Documents</h3>
