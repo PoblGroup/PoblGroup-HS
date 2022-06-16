@@ -76,7 +76,7 @@ const NewCaseForm = ({ type }) => {
             const created = await CreateNewCase(formData, type)
             if(created.status === 200) {
                 setIsSubmitting(false)
-                // setEventCreated(true)
+                setEventCreated(true)
                 notify("Case Reported Successfully!")
                 
                 const navigateBack = () => {
@@ -123,7 +123,7 @@ const NewCaseForm = ({ type }) => {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/api/hs/events", requestOptions)
+            const response = await fetch("https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events", requestOptions)
             const result = await response.json()
             return result
         } catch (error) {
@@ -158,7 +158,7 @@ const NewCaseForm = ({ type }) => {
             };
 
             try {
-                const response = await fetch(`http://localhost:5000/api/hs/events/teams`, requestOptions)
+                const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/teams`, requestOptions)
                 const result = await response.json()
                 if(result.value.length > 0) {
                     result.value.map(t => loc.push({ key: t.pobl_teamname, value: t.pobl_teamid}))

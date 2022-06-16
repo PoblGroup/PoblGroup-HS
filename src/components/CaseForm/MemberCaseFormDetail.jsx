@@ -51,7 +51,7 @@ const MemberCaseFormDetail = ({caseDetail}) => {
         };
 
         try {
-            const response = await fetch(`http://localhost:5000/api/hs/events/${formData.caseId}`, requestOptions)
+            const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/${formData.caseId}`, requestOptions)
             const result = await response.json()
             return result
         } catch (error) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Moment from 'react-moment'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { GetDynamicsToken } from '../../utils/DynamicsAuth'
 
 const Cases = ({employee}) => {
@@ -13,9 +13,9 @@ const Cases = ({employee}) => {
         const FetchCases = async () => {
             let url = ""
             if(page === '/management' && pobl_employeeismanager) {
-                url = `http://localhost:5000/api/hs/events/myteam?managerId=${pobl_employeehsid}`
+                url = `https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/myteam?managerId=${pobl_employeehsid}`
             } else {
-                url = `http://localhost:5000/api/hs/events?employeeId=${pobl_employeehsid}`
+                url = `https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events?employeeId=${pobl_employeehsid}`
             }
 
             const token = await GetDynamicsToken()

@@ -13,8 +13,8 @@ export const GetLookupValues = async () => {
     };
 
     try {
-        const response = await fetch(`http://localhost:5000/api/hs/events/lookups`, requestOptions)
-        // const response = await fetch(`http://localhost:5000/api/hs/events/lookups`, requestOptions)
+        const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/lookups`, requestOptions)
+        // const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/events/lookups`, requestOptions)
         const result = await response.json()
 
         const categories = []

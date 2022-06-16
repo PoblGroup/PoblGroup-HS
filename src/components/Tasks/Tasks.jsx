@@ -22,7 +22,7 @@ const Tasks = ({employee}) => {
             };
 
             try {
-                const response = await fetch(`http://localhost:5000/api/hs/diary/entries?employeeId=${pobl_employeehsid}`, requestOptions)
+                const response = await fetch(`https://poblgroup-dynamicsapi.azurewebsites.net/api/hs/diary/entries?employeeId=${pobl_employeehsid}`, requestOptions)
                 const result = await response.json()
                 const { error, data } = result
                 if(error) setTasksError(error)

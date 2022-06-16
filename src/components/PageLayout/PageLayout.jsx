@@ -1,7 +1,6 @@
 import { AuthenticatedTemplate } from "@azure/msal-react";
 
 import './PageLayout.css'
-import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignIn/SignOut';
 
 const PageLayout = (props) => {

@@ -1,6 +1,6 @@
 header {
     background-color:var(--yellow);
-    width: 100vw;
+    width: 100%;
     padding: 1.75rem 2rem;
 
     display: flex;
