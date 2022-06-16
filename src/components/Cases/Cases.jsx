@@ -77,7 +77,7 @@ const Cases = ({employee}) => {
             </thead>
             <tbody>
                 {/* Empty List */}
-                {myCases.length === 0 && (
+                {myCases && myCases.length === 0 && (
                     <tr>
                         <td colSpan='6'>No Team Cases Found.</td>
                     </tr>
