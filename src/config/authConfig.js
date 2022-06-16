@@ -3,7 +3,7 @@ export const msalconfig = {
         clientId: "d30e66e5-5d45-4beb-b6b2-7b37887e332b",
         authority: "https://login.microsoftonline.com/5f0d9160-6b93-41c6-8db2-153e0d7f7960",
         // redirectUri: "https://gorgeous-flan-0ba665.netlify.app/"
-        redirectUri: "https://gentle-river-058238710.1.azurestaticapps.net/"
+        redirectUri: "https://gentle-river-058238710.1.azurestaticapps.net"
     },
     cache: {
         cacheLocation: "sessionStorage",
