@@ -34,14 +34,16 @@ const Cases = ({employee}) => {
                 const result = await response.json()
                 console.log('Result', result)
 
-                if(page === '/management' && pobl_employeeismanager) {
-                    setMyCases(result)
-                } else {
-                    result.value.map(c => (
-                        c.pobl_eventdateandtime = new Date(c.pobl_eventdateandtime)
-                    ))
-                    const sortedUserCases = result.value.slice().sort((a, b) => b.pobl_eventdateandtime - a.pobl_eventdateandtime)
-                    setMyCases(sortedUserCases)
+                if(result != null) {
+                    if(page === '/management' && pobl_employeeismanager) {
+                        setMyCases(result)
+                    } else {
+                        result.value.map(c => (
+                            c.pobl_eventdateandtime = new Date(c.pobl_eventdateandtime)
+                        ))
+                        const sortedUserCases = result.value.slice().sort((a, b) => b.pobl_eventdateandtime - a.pobl_eventdateandtime)
+                        setMyCases(sortedUserCases)
+                    }
                 }
             } catch (error) {
                 console.log('Error', error)
