@@ -49,7 +49,7 @@ const CaseFormDetail = ({caseDetail}) => {
             <div className="case_detail">
                 <div className="form_group">
                     <label>Investigation Date</label>
-                    <p>{caseDetail.investigationDate}</p>
+                    <p><Moment date={caseDetail.investigationDate} format="dddd, MMMM Do YYYY" /></p>
                 </div>
                 <div className="form_group">
                     <label>Witness Type</label>

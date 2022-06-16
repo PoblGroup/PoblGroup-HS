@@ -20,30 +20,29 @@ function App() {
   return (
     <div className="App">
       <EmployeeProvider>
-        <PageLayout>
-          <AuthenticatedTemplate>
             <Router>
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path="cases/:id" element={<CaseDetail />} />
-                <Route path="cases/new" element={<NewCase />} />
-                <Route path="documents/:id" element={<DocumentDetail />} />
-                <Route path="management" element={<Management />} />
-                <Route path="management/cases/:id" element={<MemberCaseDetail />} />
-                <Route path="management/tasks/:id" element={<TaskDetail />} />
-              </Routes>
+              <PageLayout>
+                <AuthenticatedTemplate>
+                  <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path="cases/:id" element={<CaseDetail />} />
+                    <Route path="cases/new" element={<NewCase />} />
+                    <Route path="documents/:id" element={<DocumentDetail />} />
+                    <Route path="management" element={<Management />} />
+                    <Route path="management/cases/:id" element={<MemberCaseDetail />} />
+                    <Route path="management/tasks/:id" element={<TaskDetail />} />
+                  </Routes>
+                </AuthenticatedTemplate>
+                <UnauthenticatedTemplate>
+                  <div className='logged_out_container'>
+                    <LoggedOutSvg />
+                    <h1>It looks like your not logged in!</h1>
+                    <h3>Sign in below to get started.</h3>
+                    <SignIn />
+                  </div>
+                </UnauthenticatedTemplate>
+              </PageLayout>
             </Router>
-          </AuthenticatedTemplate>
-          <UnauthenticatedTemplate>
-            <div className='logged_out_container'>
-              <LoggedOutSvg />
-              <h1>It looks like your not logged in!</h1>
-              <h3>Sign in below to get started.</h3>
-              <SignIn />
-            </div>
-          </UnauthenticatedTemplate>
-          
-        </PageLayout>
       </EmployeeProvider>
     </div>
   );

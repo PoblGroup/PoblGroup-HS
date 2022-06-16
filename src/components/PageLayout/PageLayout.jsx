@@ -2,6 +2,7 @@ import { AuthenticatedTemplate } from "@azure/msal-react";
 
 import './PageLayout.css'
 import SignOut from '../SignIn/SignOut';
+import { Link } from "react-router-dom";
 
 const PageLayout = (props) => {
   return (
@@ -9,8 +10,8 @@ const PageLayout = (props) => {
         <header>
             <a className='logo' href="/">Pobl HS</a>
             <nav>
-                <li><a href='/'>Personal</a></li>
-                <li><a href='/management'>Management</a></li>
+                <li><Link to='/'>Personal</Link></li>
+                <li><Link to='/management'>Management</Link></li>
             </nav>
             <AuthenticatedTemplate>
               <SignOut />
