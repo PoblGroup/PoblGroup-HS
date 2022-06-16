@@ -76,7 +76,7 @@ const NewCaseForm = ({ type }) => {
             const created = await CreateNewCase(formData, type)
             if(created.status === 200) {
                 setIsSubmitting(false)
-                // setEventCreated(true)
+                setEventCreated(true)
                 notify("Case Reported Successfully!")
                 
                 const navigateBack = () => {
