@@ -10,7 +10,7 @@ const SignOut = () => {
     const { instance } = useMsal();
 
     return (
-        <div>
+        <div className="sign-out-btn">
             <button className="btn" onClick={() => handleLogout(instance)}>
                 Sign out
             </button>

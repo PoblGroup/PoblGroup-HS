@@ -52,3 +52,11 @@ a:hover { cursor: pointer; }
   margin: 20px 0;
   font-weight: 700;
 }
+
+.btn-red {
+  background-color: #F34F4F;
+  border-radius: 0.25rem;
+  margin: 20px 0;
+  font-weight: 700;
+  color:#fff;
+}

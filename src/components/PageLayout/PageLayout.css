@@ -28,3 +28,15 @@ nav li a {
 .pageContent {
     padding: 2rem;
 }
+
+@media screen and (max-width: 500px) {
+    .pageContent {
+        padding: 1rem;
+    }
+    /* .sign-out-btn {
+        display: none;
+    } */
+    header a {
+        margin-right: 30px;
+    }
+}

@@ -77,3 +77,16 @@
 .document h3 {
     margin: 0 0 10px 0;
 }
+
+@media screen and (max-width: 500px) {
+    .document_detail {
+        grid-template-columns: 1fr 1fr;
+    } 
+    .document_detail > *:nth-child(3n-2):nth-last-of-type(1) {
+        border-color: red;
+        grid-column: span 2;
+    }
+    .document_files .list_group {
+        width: 100%;
+    }
+}

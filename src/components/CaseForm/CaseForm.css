@@ -90,3 +90,13 @@ form h2, form h3, form h4 {
 input, textarea {
     font-family: 'Nunito', sans-serif;
 }
+
+
+@media screen and (max-width: 500px) {
+    .case_detail {
+        grid-template-columns: 1fr 1fr;
+    }
+    .col-2 {
+        grid-template-columns: 1fr;
+    }
+}
