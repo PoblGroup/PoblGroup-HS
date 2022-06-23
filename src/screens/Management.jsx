@@ -5,7 +5,7 @@ import Gravatar from 'react-gravatar'
 import Cases from "../components/Cases/Cases";
 import Tasks from "../components/Tasks/Tasks";
 
-import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
+import { useEmployeeFetch } from '../context/EmployeeContext';
 
 const Management = () => {
   const { accounts } = useMsal();
