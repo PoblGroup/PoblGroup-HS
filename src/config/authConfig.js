@@ -4,7 +4,7 @@ export const msalconfig = {
         authority: "https://login.microsoftonline.com/5f0d9160-6b93-41c6-8db2-153e0d7f7960",
         // redirectUri: "http://localhost:3000"
         // redirectUri: "https://main--gorgeous-flan-0ba665.netlify.app"
-        redirectUri: "https://gentle-river-058238710.1.azurestaticapps.net/"
+        redirectUri: "https://gentle-river-058238710.1.azurestaticapps.net"
 
     },
     cache: {
