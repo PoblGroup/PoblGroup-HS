@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useMsal } from "@azure/msal-react";
+import { useEffect, useState } from "react";
 import Gravatar from 'react-gravatar'
 
 import Cases from "../components/Cases/Cases";
@@ -7,24 +8,33 @@ import Tasks from "../components/Tasks/Tasks";
 import { useEmployee, useEmployeeFetch } from '../context/EmployeeContext';
 
 const Management = () => {
+  const { accounts } = useMsal();
+  const email = accounts[0] && accounts[0].username
   const fetchEmployee = useEmployeeFetch()
-  const employee = useEmployee().employee.value[0]
-  const { pobl_employeename, pobl_employeeemail } = employee
+  const [employee, setEmployee] = useState(null)
+
+  // const employee = useEmployee().employee.value[0]
+  // const { pobl_employeename, pobl_employeeemail } = employee
 
   useEffect(() => {
-    fetchEmployee(pobl_employeeemail)
-  }, [fetchEmployee, pobl_employeeemail])
+    const GetEmployee = async () => {
+      await fetchEmployee(email)
+      const emp = JSON.parse(localStorage.getItem("HS Employee"))
+      setEmployee(emp.employee.value[0])
+    }
+    GetEmployee()
+  }, [fetchEmployee, email])
 
   return (
     <>
       <div className="home_page_header">
         <div className="section home_avatar_container">
           <div className="home_avatar_image">
-            <Gravatar email={pobl_employeeemail} size={100} default="" />
+            <Gravatar email={employee.pobl_employeeemail} size={100} default="" />
           </div>
           <div className="home_avatar_text">
             <p>Welcome Back</p>
-            <h2>{pobl_employeename}</h2>
+            <h2>{employee.pobl_employeename}</h2>
           </div>
         </div>
         <p style={{ fontSize: '.9rem', color:'lightgrey', marginTop: '-20px', marginBottom: '20px'}}>Image powered by <a href="https://en.gravatar.com/">Gravatar</a></p>
