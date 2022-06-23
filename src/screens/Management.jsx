@@ -27,41 +27,52 @@ const Management = () => {
 
   return (
     <>
-      <div className="home_page_header">
-        <div className="section home_avatar_container">
-          <div className="home_avatar_image">
-            <Gravatar email={employee.pobl_employeeemail} size={100} default="" />
+      {employee ? (
+        <>
+          <div className="home_page_header">
+            <div className="section home_avatar_container">
+              <div className="home_avatar_image">
+                <Gravatar email={employee.pobl_employeeemail} size={100} default="" />
+              </div>
+              <div className="home_avatar_text">
+                <p>Welcome Back</p>
+                <h2>{employee.pobl_employeename}</h2>
+              </div>
+            </div>
+            <p style={{ fontSize: '.9rem', color:'lightgrey', marginTop: '-20px', marginBottom: '20px'}}>Image powered by <a href="https:en.gravatar.com/">Gravatar</a></p>
           </div>
-          <div className="home_avatar_text">
-            <p>Welcome Back</p>
-            <h2>{employee.pobl_employeename}</h2>
+
+          <div className="home_pagecontent">
+
+            <div className="section home_cases">
+              <div className="home_cases_heading">
+                <h3>Team Open Cases</h3>
+              </div>
+              <div className="section_container">
+                <Cases employee={employee}/>
+              </div>
+            </div>
+
+            <div className="section documents">
+              <div className="home_documents_heading">
+                <h3>Manager Tasks</h3>
+              </div>
+              <div className="section_container">
+                <Tasks employee={employee}/>
+              </div>
+            </div>
           </div>
-        </div>
-        <p style={{ fontSize: '.9rem', color:'lightgrey', marginTop: '-20px', marginBottom: '20px'}}>Image powered by <a href="https://en.gravatar.com/">Gravatar</a></p>
-      </div>
-      {/* Page Content */}
-      <div className="home_pagecontent">
-        {/* Open Cases */}
-        <div className="section home_cases">
-          <div className="home_cases_heading">
-            <h3>Team Open Cases</h3>
-          </div>
-          <div className="section_container">
-            <Cases employee={employee}/>
-          </div>
-        </div>
-        {/* Documents */}
-        <div className="section documents">
-          <div className="home_documents_heading">
-            <h3>Manager Tasks</h3>
-          </div>
-          <div className="section_container">
-            <Tasks employee={employee}/>
-          </div>
-        </div>
-      </div>
-      
+        </>
+      )
+      : 
+      (
+        <p>Loading...</p>
+      )}
     </>
+    // <>
+    //    
+      
+    // </>
   )
 }
 
