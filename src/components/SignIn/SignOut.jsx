@@ -4,8 +4,6 @@ function handleLogout(instance) {
     instance.logoutPopup().catch(e => {
         console.error(e);
     });
-
-    localStorage.removeItem("HS Employee");
 }
 
 const SignOut = () => {
