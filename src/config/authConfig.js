@@ -9,13 +9,13 @@ export const msalconfig = {
     },
     cache: {
         cacheLocation: "sessionStorage",
-        storeAuthStateInCookie: false
+        storeAuthStateInCookie: true
     }
 }
 
 // Add scopes to be used at Microsoft identity platform endpoints
 export const loginRequest = {
-    scopes: ["User.Read", "Team.ReadBasic.All"]
+    scopes: ["User.Read"]
 }
 
 // Add endpoints for the Microsoft Grap API
